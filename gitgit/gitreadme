@@ -1,0 +1,3 @@
+git remote add origin https://github.com/Hcricket/Repo-Hello-World
+git add .
+git commit -m "Message"
