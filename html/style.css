@@ -1,0 +1,40 @@
+/* General Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #222;
+  color: white;
+}
+
+main {
+  padding: 2em;
+}
+
+/* Highlighted Sections */
+.highlight {
+  background: white;
+  border-left: 5px solid #4CAF50;
+  margin-bottom: 2em;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Example of clip-path styling */
+.clip-path .clipped-box {
+  width: 150px;
+  height: 150px;
+  background:red;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  margin: 1em 0;
+}
+
+/* Add more styles to reflect each CSS property */
+
