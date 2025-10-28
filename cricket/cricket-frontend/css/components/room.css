@@ -1,0 +1,222 @@
+/* Rooms Section */
+.rooms-section {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--bg-white);
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.room-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.room-header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-white);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    text-align: center;
+    padding: var(--spacing-md);
+    position: relative;
+}
+
+.room-icon {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.room-content {
+    padding: var(--spacing-lg);
+}
+
+.room-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.room-description {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.room-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.topic-tag {
+    background: var(--bg-light);
+    color: var(--text-light);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 20px;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+}
+
+.room-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.room-difficulty {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+.difficulty-badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.difficulty-beginner {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.difficulty-intermediate {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.difficulty-advanced {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.room-duration {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+.room-progress {
+    margin-top: var(--spacing-md);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.progress-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+.progress-percentage {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--bg-light);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Room-specific colors */
+.room-business .room-header { background-color: #D4AF37; }
+.room-business .progress-fill { background-color: #D4AF37; }
+
+.room-food .room-header { background-color: #8B4513; }
+.room-food .progress-fill { background-color: #8B4513; }
+
+.room-banking .room-header { background-color: #654321; }
+.room-banking .progress-fill { background-color: #654321; }
+
+.room-travel .room-header { background-color: #87CEEB; }
+.room-travel .progress-fill { background-color: #87CEEB; }
+
+.room-tech .room-header { background-color: #C0C0C0; }
+.room-tech .progress-fill { background-color: #C0C0C0; }
+
+.room-daily .room-header { background-color: #90EE90; }
+.room-daily .progress-fill { background-color: #90EE90; }
+
+.room-learning .room-header { background-color: #FFFDD0; color: #333; }
+.room-learning .progress-fill { background-color: #FFFDD0; }
+
+.room-health .room-header { background-color: #FFB6C1; }
+.room-health .progress-fill { background-color: #FFB6C1; }
+
+.room-education .room-header { background-color: #ADD8E6; }
+.room-education .progress-fill { background-color: #ADD8E6; }
+
+.room-career .room-header { background-color: #000080; }
+.room-career .progress-fill { background-color: #000080; }
+
+.room-cultural .room-header { background-color: #FFA500; }
+.room-cultural .progress-fill { background-color: #FFA500; }
+
+.room-legal .room-header { background-color: #808080; }
+.room-legal .progress-fill { background-color: #808080; }
+
+.room-environment .room-header { background-color: #228B22; }
+.room-environment .progress-fill { background-color: #228B22; }
+
+.room-media .room-header { background-color: #9370DB; }
+.room-media .progress-fill { background-color: #9370DB; }
+
+.room-sports .room-header { background-color: #FF0000; }
+.room-sports .progress-fill { background-color: #FF0000; }
+
+.room-shopping .room-header { background-color: #FFC0CB; }
+.room-shopping .progress-fill { background-color: #FFC0CB; }
+
+.room-emergency .room-header { background-color: #FF8C00; }
+.room-emergency .progress-fill { background-color: #FF8C00; }
+
+.room-housing .room-header { background-color: #F5F5DC; color: #333; }
+.room-housing .progress-fill { background-color: #F5F5DC; }
+
+.room-relationships .room-header { background-color: #DDA0DD; }
+.room-relationships .progress-fill { background-color: #DDA0DD; }
+
+.room-grammar .room-header { background-color: #A9A9A9; }
+.room-grammar .progress-fill { background-color: #A9A9A9; }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket - English Learning Platform</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/rooms.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-cricket"></i>
+                    <h1>Cricket</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#" class="nav-link active">Home</a></li>
+                        <li><a href="#rooms" class="nav-link">Rooms</a></li>
+                        <li><a href="#features" class="nav-link">Features</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions" id="userActions">
+                    <!-- Dynamic content - shows login/register or user menu -->
+                    <button class="btn btn-secondary" id="loginBtn">Sign In</button>
+                    <button class="btn btn-primary" id="registerBtn">Get Started</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>ENGLISH LANGUAGE LEARNING</h2>
+                <p>Explore specialized English learning rooms designed for real-world situations. From business meetings to restaurant orders, learn the language you need for the situations you face.</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search for lessons, vocabulary, or topics...">
+                        <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section" id="rooms">
+        <div class="container">
+            <h2 class="section-title">Explore Learning Rooms</h2>
+            <div class="rooms-grid" id="roomsGrid">
+                <!-- Rooms will be loaded dynamically -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading rooms...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Learn with Cricket?</h2>
+            <div class="features-grid">
+                <!-- Features content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer content -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Room Modal -->
+    <div class="modal" id="roomModal">
+        <div class="modal-content">
+            <!-- Modal content loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content auth-modal">
+            <!-- Login form -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

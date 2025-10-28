@@ -1,0 +1,125 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .rooms-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+    }
+    
+    .lessons-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header */
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .user-actions {
+        display: none;
+    }
+    
+    /* Hero */
+    .hero h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* Rooms */
+    .rooms-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        margin: var(--spacing-md) auto;
+    }
+    
+    .lessons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Header */
+    .logo h1 {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Hero */
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box input {
+        border-radius: var(--border-radius-md);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .search-box button {
+        border-radius: var(--border-radius-md);
+        width: 100%;
+    }
+    
+    /* Auth */
+    .auth-modal {
+        margin: var(--spacing-sm);
+        width: calc(100% - var(--spacing-xl));
+    }
+    
+    .social-auth {
+        flex-direction: column;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f8f9fa;
+        --text-light: #adb5bd;
+        --bg-light: #212529;
+        --bg-white: #343a40;
+        --border-color: #495057;
+    }
+    
+    .room-card {
+        background: var(--bg-white);
+    }
+    
+    .topic-tag {
+        background: #495057;
+        color: var(--text-light);
+    }
+}

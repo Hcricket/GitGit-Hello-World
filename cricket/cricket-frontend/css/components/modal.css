@@ -1,0 +1,209 @@
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--bg-white);
+    margin: var(--spacing-xl) auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+}
+
+/* Room Modal Specific */
+.room-modal-header {
+    padding: var(--spacing-xl);
+    color: var(--bg-white);
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.room-modal-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.room-modal-description {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.lessons-section {
+    margin-top: var(--spacing-xl);
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.lesson-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: var(--bg-white);
+}
+
+.lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.lesson-image {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-light);
+    position: relative;
+}
+
+.lesson-duration {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background: rgba(0,0,0,0.7);
+    color: var(--bg-white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 12px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.lesson-content {
+    padding: var(--spacing-lg);
+}
+
+.lesson-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.lesson-description {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.lesson-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.lesson-level {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+.lesson-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-start-lesson {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-start-lesson:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-preview {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-preview:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.completed-badge {
+    background: var(--success-color);
+    color: var(--bg-white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 12px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
